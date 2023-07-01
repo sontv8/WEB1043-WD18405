@@ -35,7 +35,7 @@
 
 
 
-var products = ["iphone", 1000, 50];
+// var products = ["iphone", 1000, 50];
 /*
     thêm mới giá trị vào cuối mảng
     thêm mới vào đầu mảng
@@ -47,7 +47,7 @@ var products = ["iphone", 1000, 50];
 // products.unshift("New Product");
 // products.pop();
 // products.shift();
-products.splice(0, 1);
+// products.splice(0, 1);
 /*
     hàm splice nhận vào 3 tham số
         tham số 1: vị trí cần thực hiện
@@ -56,4 +56,29 @@ products.splice(0, 1);
             nếu giá trị là 1 -> xóa 1 phần tử ở vị trí index là tham số 1
         tham số 3: giá trị mới
 */
-console.log(products);
+// console.log(products);
+
+
+var products = [
+    "iphone",
+    "xiaomi",
+    "vinsmart"
+]
+
+function addProduct() {
+    var newProduct = prompt("Nhap ten san pham:")
+    products.push(newProduct);
+    console.log(products);
+}
+function updateProduct() {
+    var data = prompt("Nhap gia tri can update:");
+    if (products.includes(data)) {
+        // console.log(products.indexOf(data));
+        var newData = prompt("Nhap gia tri moi:");
+        products.splice(products.indexOf(data), 1, newData);
+        console.log(products);
+    } else {
+        console.log("Khong ton tai");
+    }
+}
+function deleteProduct() { }
