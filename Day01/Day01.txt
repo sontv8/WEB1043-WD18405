@@ -1,0 +1,10 @@
+1. Javascript là gì?
+2. Tại sao phải học Js
+3. Sử dụng Js trong file HTML như thế nào?
+4. Khai báo biến trong Js
+5. Comments
+6. Một số hàm built-in trong Js
+    - console.log()
+    - prompt()
+    - alert()
+    - confirm()
