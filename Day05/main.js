@@ -42,11 +42,44 @@ var product = {
     price: '799$'
 }
 
-var productName = document.querySelector('#product-name')
-var productBrand = document.querySelector('#product-brand')
-var productPrice = document.querySelector('#product-price')
+// var productName = document.querySelector('#product-name')
+// var productBrand = document.querySelector('#product-brand')
+// var productPrice = document.querySelector('#product-price')
 
-console.log(product.name);
-productName.innerHTML = product.name
-productBrand.innerHTML = product.brand
-productPrice.innerHTML = product.price
+// console.log(product.name);
+// productName.innerHTML = product.name
+// productBrand.innerHTML = product.brand
+// productPrice.innerHTML = product.price
+
+var productDiv = document.querySelector('#product')
+// productDiv.innerHTML = "<p>" + product.brand + "</p>";
+// productDiv.innerHTML = "<h3>" + product.name + "</h3>"
+//     + "<p>" + product.brand + "</p>"
+//     + "<p>" + product.price + "</p>";
+
+var myName = 'sontv';
+// productDiv.innerHTML = 'Tài khoản: ' + myName;
+productDiv.innerHTML = `
+    <h3 id="brand">${product.brand}</h3>
+    <p>${product.name}</p>
+    <p>${product.price}</p>
+`;
+
+var menus = [
+    { id: 1, name: 'Home', path: '/' },
+    { id: 2, name: 'Shop', path: '/shop' },
+    { id: 3, name: 'Blog', path: '/blog' },
+    { id: 4, name: 'Category', path: '/category' },
+    { id: 5, name: 'About', path: '/about' }
+]
+var services = [
+    { id: 1, name: "RECYCLE" },
+    { id: 2, name: "CUSTOM" },
+    { id: 3, name: "HANDMADE" }
+]
+var members = [
+    { id: 1, name: "Yeung Ngai", position: "DESIGNER", image: "https://picsum.photos/328/442" },
+    { id: 2, name: "Nicolas Waldau", position: "ARCHITECT", image: "https://picsum.photos/328/442" },
+    { id: 3, name: "Juliette Massé", position: "STORE MANAGER", image: "https://picsum.photos/328/442" },
+    { id: 4, name: "Nicolette Ritonni", position: "FINE CERAMICS", image: "https://picsum.photos/328/442" },
+]
