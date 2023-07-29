@@ -13,15 +13,24 @@ function isEmpty(obj) {
     return true;
 }
 
+function checkLength(element, message) {
+    if (element.value == "") {
+        return message;
+    }
+}
+
 form.addEventListener("submit", function (e) {
     e.preventDefault();
-    var errors = {}
-    if (productName.value == "") {
-        errors.name = "Product name is required"
-    }
-    if (price.value == "") {
-        errors.price = "Price is required"
-    }
+    var errors = {};
+    errors.name = checkLength(productName, "Product name is required")
+    errors.price = checkLength(price, "Price is required")
+    // if (productName.value == "") {
+    //     errors.name = "Product name is required"
+    // }
+    // if (price.value == "") {
+    //     errors.price = "Price is required"
+    // }
+
 
     if (!isEmpty(errors)) {
         nameError.innerHTML = errors.name ? errors.name : "";
